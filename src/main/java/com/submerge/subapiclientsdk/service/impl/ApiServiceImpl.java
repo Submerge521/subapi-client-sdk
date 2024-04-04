@@ -3,10 +3,7 @@ package com.submerge.subapiclientsdk.service.impl;
 import com.submerge.subapiclientsdk.client.SubApiClient;
 import com.submerge.subapiclientsdk.exception.ApiException;
 import com.submerge.subapiclientsdk.model.request.*;
-import com.submerge.subapiclientsdk.model.response.LoveResponse;
-import com.submerge.subapiclientsdk.model.response.PoisonousChickenSoupResponse;
-import com.submerge.subapiclientsdk.model.response.RandomWallpaperResponse;
-import com.submerge.subapiclientsdk.model.response.ResultResponse;
+import com.submerge.subapiclientsdk.model.response.*;
 import com.submerge.subapiclientsdk.service.ApiService;
 import com.submerge.subapiclientsdk.service.BaseService;
 
@@ -50,6 +47,13 @@ public class ApiServiceImpl extends BaseService implements ApiService {
     }
 
     @Override
+    public MoYuResponse moYu() throws ApiException {
+        MoYuRequest request = new MoYuRequest();
+        return request(request);
+    }
+
+
+    @Override
     public LoveResponse randomLoveTalk(SubApiClient subApiClient) throws ApiException {
         LoveRequest request = new LoveRequest();
         return request(subApiClient, request);
@@ -83,5 +87,15 @@ public class ApiServiceImpl extends BaseService implements ApiService {
     @Override
     public ResultResponse getWeatherInfo(WeatherRequest request) throws ApiException {
         return request(request);
+    }
+
+    @Override
+    public NameResponse getUserName(NameRequest nameRequest) throws ApiException {
+        return request(nameRequest);
+    }
+
+    @Override
+    public NameResponse getUserName(NameRequest nameRequest, SubApiClient subApiClient) throws ApiException {
+        return request(subApiClient, nameRequest);
     }
 }

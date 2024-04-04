@@ -1,7 +1,7 @@
 package com.submerge.subapiclientsdk.model.enums;
 
 /**
- * @Author: QiMu
+ * @Author: Submerge
  * @Date: 2023年09月17日 13:27
  * @Version: 1.0
  * @Description:

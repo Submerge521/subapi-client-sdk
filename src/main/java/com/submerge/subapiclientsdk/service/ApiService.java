@@ -4,10 +4,7 @@ import cn.hutool.http.HttpResponse;
 import com.submerge.subapiclientsdk.client.SubApiClient;
 import com.submerge.subapiclientsdk.exception.ApiException;
 import com.submerge.subapiclientsdk.model.request.*;
-import com.submerge.subapiclientsdk.model.response.LoveResponse;
-import com.submerge.subapiclientsdk.model.response.PoisonousChickenSoupResponse;
-import com.submerge.subapiclientsdk.model.response.RandomWallpaperResponse;
-import com.submerge.subapiclientsdk.model.response.ResultResponse;
+import com.submerge.subapiclientsdk.model.response.*;
 
 
 /**
@@ -82,6 +79,8 @@ public interface ApiService {
      */
     LoveResponse randomLoveTalk() throws ApiException;
 
+    MoYuResponse moYu() throws ApiException;
+
     /**
      * 随意情话
      *
@@ -147,4 +146,24 @@ public interface ApiService {
      * @throws ApiException 业务异常
      */
     ResultResponse getWeatherInfo(WeatherRequest request) throws ApiException;
+
+    /**
+     * 获取输入的名称
+     * @param nameRequest
+     * @return
+     * @throws ApiException
+     */
+    NameResponse getUserName(NameRequest nameRequest) throws ApiException;
+
+    /**
+     * 获取输入的名称
+     * @param nameRequest
+     * @param subApiClient
+     * @return
+     * @throws ApiException
+     */
+    NameResponse getUserName(NameRequest nameRequest,SubApiClient subApiClient) throws ApiException;
+
+
+
 }

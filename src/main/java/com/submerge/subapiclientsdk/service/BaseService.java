@@ -25,7 +25,7 @@ import java.util.Map;
 
 
 /**
- * @Author: QiMu
+ * @Author: Submerge
  * @Date: 2023年09月19日 11:03
  * @Version: 1.0
  * @Description:
@@ -37,7 +37,7 @@ public abstract class BaseService implements ApiService {
     /**
      * 网关HOST
      */
-    private String gatewayHost = "https://gateway.qimuu.icu/api";
+    private String gatewayHost = "http://localhost:8090/api";
 
     /**
      * 检查配置
